@@ -54,4 +54,4 @@ Thus, data analytics was successfully performed on the given dataset using Pytho
 
 The dataset was successfully examined and cleaned, making it suitable for further data analysis, visualization, and Machine Learning applications.
 
-# RESULT
+
