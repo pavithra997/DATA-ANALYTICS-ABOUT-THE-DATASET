@@ -16,38 +16,66 @@ Data Cleaning – Duplicate records and missing values can be removed or replace
 Data Visualization – Graphs and charts can be used to understand patterns and relationships in the data.
 import pandas as pd
 
-# PYTHON CODE
-# Step 1: Load dataset
-data = pd.read_csv("dataset.csv")
+# PROCEDURE
+```
+1.Import the Pandas library to work with the dataset.
+2.Load the dataset using pd.read_csv() and store it in a DataFrame.
+3.Display the first five records using head().
+4.Display the shape of the dataset using shape.
+5.Display the column names using columns.
+6.Display the data types of each column using dtypes.
+7.Display complete dataset information using info().
+8.Display the statistical summary using describe().
+9.Check for missing values using isnull().sum().
+10.Check for duplicate rows using duplicated().sum().
+11.Remove duplicate rows using drop_duplicates().
+12.Display the dataset after removing duplicates.
+```
 
-# Step 2: Display first five records
-print("First Five Records:") print(data.head())
+# CODE
+```
+from google.colab import drive
+drive.mount('/content/drive')
+import pandas as pd
+df = pd.read_csv('/content/drive/My Drive/Data.csv')
+df.head()
+print("\nDataset Shape:")
+print(df.shape)
 
-# Step 3: Display dataset shape
-print("\nDataset Shape:") print(data.shape)
 
-# Step 4: Display column names
-print("\nColumn Names:") print(data.columns)
+print("\nColumn Names:")
+print(df.columns)
 
-# Step 5: Display data types
-print("\nData Types:") print(data.dtypes)
 
-# Step 6: Display information
-print("\nDataset Information:") data.info()
+print("\nData Types:")
+print(df.dtypes)
 
-# Step 7: Display statistical summary
-print("\nStatistical Summary:") print(data.describe())
 
-# Step 8: Check missing values
-print("\nMissing Values:") print(data.isnull().sum())
+print("\nDataset Information:")
+df.info()
 
-# Step 9: Check duplicate rows
-print("\nDuplicate Rows:") print(data.duplicated().sum())
+print("\nStatistical Summary:")
+print(df.describe())
 
-# Step 10: Remove duplicate rows
-data = data.drop_duplicates()
 
-print("\nDataset after removing duplicates:") print(data.head())
+print("\nMissing Values:")
+print(df.isnull().sum())
+
+
+print("\nDuplicate Rows:")
+print(df.duplicated().sum())
+
+
+df = df.drop_duplicates()
+
+
+print("\nDataset after removing duplicates:")
+print(df.head())
+```
+
+# OUTPUT
+<img width="660" height="681" alt="image" src="https://github.com/user-attachments/assets/3880f632-c64a-4f27-a198-9520b657773b" />
+<img width="411" height="522" alt="image" src="https://github.com/user-attachments/assets/7aa998f4-5855-4b53-9515-b6bbf8666c27" />
 
 # RESULT
 Thus, data analytics was successfully performed on the given dataset using Python and Pandas. The characteristics, structure, dimensions, data types, missing values, and duplicate records of the dataset were identified.
